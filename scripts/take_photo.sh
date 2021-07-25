@@ -6,7 +6,7 @@ set -e
 
 image_number="$(cat camera/.image_number 2>/dev/null)"
 
-printf "Curren Image Number: ${_GREEN_}${_BOLD_}$image_number${_UNBOLD_}${_RESETALL_}\n"
+printf "Current Image Number: ${_GREEN_}${_BOLD_}$image_number${_UNBOLD_}${_RESETALL_}\n"
 
 raspistill -o static/img/image_${image_number}.jpg
 

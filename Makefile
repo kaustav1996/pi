@@ -15,15 +15,21 @@ pi.ssh:
 
 # ███████████████████████████████████████████████████████████████████████
 
+### Update Code
+pi.update:  ## Add a new biller
+	@./scripts/git_pull.sh
+
+# ███████████████████████████████████████████████████████████████████████
+
+pi.command:
+	@. .envrc
+	@./scripts/send_command.sh $${PI_LOCAL_IP} "$${COMMAND}"
+
+# ███████████████████████████████████████████████████████████████████████
+
 ### Capture Photo
 
 pi.capture:  ## Add a new biller
 	@./scripts/take_photo.sh
-
-# ███████████████████████████████████████████████████████████████████████
-
-### Update Code
-pi.update:  ## Add a new biller
-	@./scripts/git_pull.sh
 
 # ███████████████████████████████████████████████████████████████████████
