@@ -9,6 +9,6 @@ printf "Curren Image Number: ${_GREEN_}${_BOLD_}$image_number${_UNBOLD_}${_RESET
 
 raspistill -o ~/pi/static/img/image_${image_number}.jpg
 
-printf "\n"
+echo $(( image_number + 1 )) > camera/.image_number
 
-raspistill -o ~/pi/static/img/image.jpg
+printf "\n"
